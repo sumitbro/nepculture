@@ -1,0 +1,133 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Colorlib Templates">
+    <meta name="author" content="Colorlib">
+    <meta name="keywords" content="Colorlib Templates">
+
+    <!-- Title Page-->
+    <title>Apply for job by Colorlib</title>
+
+    <!-- Font special for pages-->
+    <link href="{% static 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i' %}" rel="stylesheet">
+
+    <!-- Main CSS-->
+    <link href="{% static 'new_blog/css/main.css' %}" rel="stylesheet" media="all">
+</head>
+
+<body>
+
+    <div class="page-wrapper bg-dark p-t-100 p-b-50">
+        <div class="wrapper wrapper--w900">
+            <div class="card card-6">
+                <div class="card-heading">
+                    <h2 class="title">Fill the box</h2>
+                </div>
+                <div class="card-body">
+                    <form action="/add_item" method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <!-- <div class="form-row">
+                            <label for="category">Example select</label>
+                            <select class="form-control" id="category", name="category">
+                              <option>painting</option>
+                              <option>statue</option>
+                              <option>3</option>
+                              <option>4</option>
+                              <option>5</option>
+                            </select>
+                          </div> -->
+                        <div class="form-row">
+                            <div class="name">Title</div>
+                            <div class="value">
+                                <input class="input--style-6" type="text" name="title">
+                            </div>
+                        </div>
+                         <!-- <div class="form-row">
+                            <div class="name">Writer</div>
+                            <div class="value"> -->
+                                <!-- <input class="input--style-6" type="text" name="writer" value="{{user.username}}" hidden> -->
+                            <!-- </div>
+                        </div> -->
+                        <div class="form-row">
+                            <div class="name">Price</div>
+                            <div class="value">
+                                <input class="input--style-6" type="text" name="price">
+                            </div>
+                        </div>
+                        <!-- <div class="form-row">
+                            <div class="name">Title</div>
+                            <div class="value">
+                                <input class="input--style-6" type="text" name="title">
+                            </div>
+                        </div> -->
+                         
+
+
+
+
+
+
+
+                       
+                        <div class="form-row">
+                            <div class="name">Description</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <textarea class="textarea--style-6" name="description"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="form-row">
+                            <div class="name">Upload Image file</div>
+                            <div class="value">
+                                <div class="input-group js-input-file">
+                                    <input class="input-file" type="file" name="img" accept="image/*" id="img">
+                                    <label class="label--file" for="img">Choose file</label>
+                                    <span class="input-file__info">No file chosen</span>
+                                </div>
+                                
+                            </div>
+                        </div> 
+                        
+
+
+                        
+            
+            
+            
+        </div>
+
+
+
+
+                   
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn--radius-2 btn--blue-2" type="submit">Upload</button>
+                </div>
+            </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Jquery JS-->
+    <script src="{% static 'new_blog/vendor/jquery/jquery.min.js' %}"></script>
+
+
+    <!-- Main JS-->
+    <script src="{% static 'new_blog/js/global.js' %}"></script>
+
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+</html>
+<!-- end document-->
+{% endblock %}

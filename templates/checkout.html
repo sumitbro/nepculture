@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+
+
+
+        <!-- End Bradcaump area -->
+        <!-- Start Checkout Area -->
+        <section class="our-checkout-area ptb--120 bg__white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        
+
+
+                        <div class="ckeckout-left-sidebar">
+                            <!-- Start Checkbox Area -->
+                            <div class="checkout-form">
+                                <h2 class="section-title-3">Billing details</h2>
+                                <form method="POST" action="">
+                                    {% csrf_token %}
+                                        {{form|crispy}}
+                                        <button class="btn btn-primary" type="submit">Continue To Checkout</button>
+                                </form>
+                                
+                            </div>
+                            <!-- End Checkbox Area -->
+                            <!-- Start Payment Box -->
+                            
+                            <!-- End Payment Box -->
+                            <!-- Start Payment Way -->
+                            
+                            <!-- End Payment Way -->
+                        </div>
+                    </div>
+
+
+
+                    
+                </div>
+            </div>
+        </section>
+        <!-- End Checkout Area -->
+        <!-- Start Footer Area -->
+        {% endblock %}

@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+</div>
+
+<!-- {% if messages %}
+{%for k in messages %}
+{{k}}
+{% endfor %}
+{% endif %} -->
+
+
+{% if sr %}
+{% for item in sr %}
+
+<div class="col-md-3 single__pro col-lg-3 cat--1 col-sm-4 col-xs-12">
+    <div class="product foo">
+        <div class="product__inner">
+            <div class="pro__thumb">
+                <a href="/product-details">
+                    <img src="{{item.img.url}}" alt="product images">
+                </a>
+            </div>
+            <div class="product__hover__info">
+                <ul class="product__action">
+                    <li><a title="Quick View" class="quick-view modal-view detail-link" href="/product-details"><span class="ti-plus"></span></a></li>
+                   
+                    <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="product__details">
+            <h2><a href="/product-details">{{item.title}}</a></h2>
+            <ul class="product__price">
+                <li class="old__price">0.00</li>
+                <li class="new__price">Price:${{item.price}}</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+{% endfor %}
+{% endif %}
+
+</div>
+</div>
+
+{% endblock %}

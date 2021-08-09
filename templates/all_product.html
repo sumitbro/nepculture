@@ -1,0 +1,148 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    
+        <!-- End Offset Wrapper -->
+        <!-- Start Bradcaump area -->
+        
+        <!-- End Bradcaump area --> 
+        <!-- Start Our Product Area -->
+        <section class="htc__product__area shop__page ptb--130 bg__white">
+            <div class="container">
+                <div class="htc__product__container">
+                    <!-- Start Product MEnu -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="filter__menu__container">
+                                <div class="product__menu">
+                                    <button data-filter="*"  class="is-checked">All</button>
+                                    <button data-filter=".cat--1">New </button>
+                                    <button data-filter=".cat--2">Best Selling</button>
+                                    <button data-filter=".cat--3">Trending</button>
+                                    
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Start Filter Menu -->
+                    
+                    <!-- End Filter Menu -->
+                    <!-- End Product MEnu -->
+                    <div class="row">
+                        <div class="product__list another-product-style">
+                            <!-- Start Single Product -->
+                            {% for items in item %}
+                            <div class="col-md-3 single__pro col-lg-3 cat--1 col-sm-4 col-xs-12">
+                                <div class="product foo">
+                                    <div class="product__inner">
+                                        <div class="pro__thumb">
+                                            <a href="/singleproduct/{{items.id}}">
+                                                <img src="{{items.img.url}}" alt="product images">
+                                            </a>
+                                        </div>
+                                        <div class="product__hover__info">
+                                            <ul class="product__action">
+                                                <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
+                                                <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="product__details">
+                                        <h2><a href="/singleproduct/{{items.id}}">{{items.title}}</a></h2>
+                                        <ul class="product__price">
+                                            <!-- <li class="old__price">$16.00</li> -->
+                                            <li class="new__price">RS.{{items.price}}</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                            <!-- End Single Product -->
+                            <!-- Start Single Product -->
+                           
+                            <!-- End Single Product -->
+                            <!-- Start Single Product -->
+                            {% for items in item1 %}
+                            <div class="col-md-3 single__pro col-lg-3 col-sm-4 col-xs-12 cat--2">
+                                <div class="product foo">
+                                    <div class="product__inner">
+                                        <div class="pro__thumb">
+                                            <a href="/singleproduct/{{items.id}}">
+                                                <img src="{{items.img.url}}" alt="product images">
+                                            </a>
+                                        </div>
+                                        <div class="product__hover__info">
+                                            <ul class="product__action">
+                                                <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
+                                                <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="product__details">
+                                        <h2><a href="/singleproduct/{{items.id}}">{{items.name}}</a></h2>
+                                        <ul class="product__price">
+                                            <!-- <li class="old__price">$16.00</li> -->
+                                            <li class="new__price">RS.{{items.price}}</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                            <!-- End Single Product -->
+                            <!-- Start Single Product -->
+                            
+                            <!-- End Single Product -->
+                            <!-- Start Single Product -->
+                            {% for items in item2 %}
+                            <div class="col-md-3 single__pro col-lg-3 col-sm-4 col-xs-12 cat--3">
+                                <div class="product foo">
+                                    <div class="product__inner">
+                                        <div class="pro__thumb">
+                                            <a href="/singleproduct/{{items.id}}">
+                                                <img src="{{items.img.url}}" alt="product images">
+                                            </a>
+                                        </div>
+                                        <div class="product__hover__info">
+                                            <ul class="product__action">
+                                                <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
+                                                <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="product__details">
+                                        <h2><a href="/singleproduct/{{items.id}}">{{items.title}}</a></h2>
+                                        <ul class="product__price">
+                                            <!-- <li class="old__price">$16.00</li> -->
+                                            <li class="new__price">RS.{{items.price}}</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                            <!-- End Single Product -->
+                            <!-- Start Single Product -->
+                            
+
+                            <!-- End Single Product -->
+                        </div>
+                    </div>
+                    <!-- Start Load More BTn -->
+                    <div class="row mt--60">
+                        <div class="col-md-12">
+                            <div class="htc__loadmore__btn">
+                                <a href="#">load more</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Load More BTn -->
+                </div>
+            </div>
+        </section>
+    </div>
+        <!-- End Our Product Area -->
+        <!-- Start Footer Area -->
+        {% endblock %}
